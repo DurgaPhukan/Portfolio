@@ -5,7 +5,7 @@ import {
   ReactPortal,
 } from "react";
 import useSWR, { SWRConfig } from "swr";
-import { getAuthToken } from "../utils/auth";
+import { getAuthToken } from "../../utils/auth";
 
 // const token = getAuthToken();
 // console.log("Token Home", token);
