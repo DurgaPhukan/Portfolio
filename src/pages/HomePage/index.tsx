@@ -1,14 +1,10 @@
-import {
-  JSXElementConstructor,
-  ReactElement,
-  ReactFragment,
-  ReactPortal,
-} from "react";
-import useSWR, { SWRConfig } from "swr";
-import { getAuthToken } from "../../utils/auth";
-
 // const token = getAuthToken();
 // console.log("Token Home", token);
+
+import Card from "../../components/Card";
+import MainWrapper from "../../components/MainWrapper";
+import SocialLinks from "../../components/SocialLinks";
+import ProfileDetails from "./ProfileDetails";
 
 // const fetcher = async (url: string) => {
 //   const res = await fetch(url, {
@@ -32,10 +28,13 @@ function HomePage() {
   // console.log(data);
 
   return (
-    <div className="h-full text-gray-600">
-      <div className="mx-4">{/* <Carousal /> */}</div>
-      <h2>This is home</h2>
-    </div>
+    <MainWrapper>
+      <Card>
+        <ProfileDetails />
+        <SocialLinks />
+      </Card>
+      <Card>About</Card>
+    </MainWrapper>
   );
 }
 export default HomePage;

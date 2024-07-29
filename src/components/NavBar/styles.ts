@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
+import { Box } from "@mui/material";
+import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
-export const StyledNavContainer = styled("div")(({ theme }) => ({
+export const StyledNavContainer = styled("div")(({}) => ({
   //   backgroundColor: "#6c757d",
-  backgroundColor: "rgba(20,20,20,.5)",
+  backgroundColor: "#212529",
   padding: ".5rem",
   borderRadius: "1rem",
   display: "flex",
@@ -18,6 +20,12 @@ export const StyledNavContainer = styled("div")(({ theme }) => ({
   //     display: "none",
   //   },
 }));
+
+// export const StyledNav = styled(
+//   (props: { show: boolean; children: ReactNode }) => (
+//     <div {...props}>{props.children}</div>
+//   )
+// )(({ theme }) => ({}));
 
 export const StyledNavItems = styled(NavLink)(() => ({
   //   color: "rgba(0,0,0,1)",

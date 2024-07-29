@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyledNavContainer, StyledNavItems } from "./styles";
 
 interface sectionInterface {
@@ -31,6 +31,21 @@ const sections: sectionInterface[] = [
 ];
 
 const NavBar = () => {
+  const [show, setShow] = useState(false);
+  const controlNavbar = () => {
+    if (window.scrollY > 250) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
   return (
     <StyledNavContainer>
       {sections.map((section) => (
@@ -44,10 +59,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// <NavLink
-// onClick={profileDropDownMenuHandler}
-// className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-// role="menuitem"
-// to={item.link}
-// >
