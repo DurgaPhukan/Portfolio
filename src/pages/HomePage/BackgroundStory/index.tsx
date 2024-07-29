@@ -1,0 +1,122 @@
+import React from "react";
+import { IDetailSections } from "..";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+
+interface studyDataInterface {
+  course: string;
+  year: string;
+  percentage: string;
+}
+
+export const studyData: studyDataInterface[] = [
+  {
+    course: "Bachelor of Engineering in Electronics and Telecommunication",
+    year: "2017-2021",
+    percentage: "79.36%",
+  },
+  {
+    course: "Higher Secondary (12th)",
+    year: "2016",
+    percentage: "80%",
+  },
+  {
+    course: "Matriculation Examination",
+    year: "2014",
+    percentage: "86.5%",
+  },
+];
+
+export const Study = () => {
+  return (
+    <div>
+      {studyData.map((data) => (
+        <div>
+          <h3>{data.course}</h3>
+          <h6>{data.year}</h6>
+          <p>Percentage :{data.percentage}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export const AboutYourself = () => {
+  return (
+    // <div style={{ color: "#ffffff", maxWidth: "550px" }}>
+    <p
+      style={{
+        wordSpacing: ".2rem",
+        color: "#adb5bd",
+        fontSize: "1.1rem",
+        wordBreak: "inherit",
+        lineHeight: "25px",
+        fontWeight: 300,
+      }}
+    >
+      Senior Frontend Engineer I build pixel-perfect, engaging, and accessible
+      digital experiences. ABOUT EXPERIENCE PROJECTS GitHub LinkedIn CodePen
+      Instagram Twitter Goodreads ABOUT Back in 2012, I decided to try my hand
+      at creating custom Tumblr themes and tumbled head first into the rabbit
+      hole of coding and web development. Fast-forward to today, and I’ve had
+      the privilege of building software for an advertising agency, a start-up,
+      a huge corporation, and a digital product studio. My main focus these days
+      is building accessible user interfaces for our customers at Klaviyo. I
+      most enjoy building software in the sweet spot where design and
+      engineering meet — things that look good but are also built well under the
+      hood. In my free time, I've also released an online video course that
+      covers everything you need to know to build a web app with the Spotify
+      API. When I’m not at the computer, I’m usually rock climbing, reading,
+      hanging out with my wife and two cats, or running around Hyrule searching
+      for Korok seeds K o r o k s e e d s .
+    </p>
+    // </div>
+  );
+};
+
+export const Activities = () => {
+  return (
+    <div style={{ width: "400px" }}>
+      <h3>These are my activities</h3>
+      <ul>
+        <li>blah</li>
+        <li>bleh</li>
+        <li>blah</li>
+      </ul>
+    </div>
+  );
+};
+
+const BackgroundStory = ({
+  detailsSections,
+}: {
+  detailsSections: IDetailSections[];
+}) => {
+  return (
+    <div
+      style={{
+        color: "#ffffff",
+        maxWidth: "550px",
+      }}
+    >
+      {detailsSections.map(
+        (detail) =>
+          detail.active && (
+            <motion.div
+              animate={{
+                x: [50, -20, 0],
+              }}
+              transition={{
+                duration: 1, // Total duration of the animation
+                ease: "easeInOut", // Easing function
+              }}
+            >
+              {detail.component}
+            </motion.div>
+          )
+        // <motion.div>{detail.component}</motion.div>
+      )}
+    </div>
+  );
+};
+
+export default BackgroundStory;

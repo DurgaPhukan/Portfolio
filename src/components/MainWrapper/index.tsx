@@ -5,6 +5,7 @@ const MainWrapper = styled(MuiCard)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   margin: "auto",
+  backgroundColor: "#000000",
 }));
 
 export default MainWrapper;

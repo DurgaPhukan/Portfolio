@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/Error";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import RootLayout from "./pages/Root";
 import HomePage from "./pages/HomePage";
+import Projects from "./pages/Projects";
+import Activities from "./pages/Activities";
 
 const router = createBrowserRouter([
   {
@@ -19,25 +21,15 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
-        // action: loginAction,
       },
-      // {
-      //   path: "signup",
-      //   element: <SignUp />,
-      //   action: signupAction,
-      //   children: [],
-      // },
-      // {
-      //   path: "men",
-      //   element: <MenLayoutPage />,
-      //   children: [
-      //     // {
-      //     //   path:':productid',
-      //     //   element: <ProductLayout/>,
-      //     //   children:[],
-      //     // },
-      //   ],
-      // },
+      {
+        path: "projects",
+        element: <Projects />,
+      },
+      {
+        path: "activities",
+        element: <Activities />,
+      },
     ],
   },
 ]);

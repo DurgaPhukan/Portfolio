@@ -2,6 +2,7 @@ import { styled } from "@mui/material";
 
 export const StyledBgContainer = styled("div")(({ theme }) => ({
   backgroundColor: "rgb(0,0,0)",
+  height: "100vh",
   color: "#ffffff",
   padding: "50px",
   //   border: `1px solid ${theme.palette.divider}`,
@@ -16,10 +17,10 @@ export const StyledBgContainer = styled("div")(({ theme }) => ({
 
 export const MovableContainer = styled("div")(({ theme }) => ({
   position: "absolute",
-  left: "-100px",
-  top: "-100px",
-  width: "400px",
-  height: "400px",
+  left: "-50px",
+  top: "20px",
+  width: "300px",
+  height: "300px",
   borderRadius: "50%",
   background: "white",
   bordeRadius: "50%",

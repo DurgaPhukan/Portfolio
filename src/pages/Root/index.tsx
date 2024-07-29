@@ -11,14 +11,14 @@ function RootLayout() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <NavBar />
       </div>
-      <StyledTagLineWrapper>
-        <StyledH1 style={{ fontSize: "5rem" }}>Building The Future </StyledH1>
+      <StyledTagLineWrapper style={{ margin: "3.5rem 0px" }}>
+        <StyledH1 style={{ fontSize: "4rem" }}>Building The Future </StyledH1>
         <StyledRedSpan>Together</StyledRedSpan>
       </StyledTagLineWrapper>
-      <main className="" style={{ minHeight: "700px" }}>
+      <main className="" style={{ minHeight: "600px" }}>
         <Outlet />
       </main>
-      <div style={{ height: "100px" }}>Footer</div>
+      {/* <div style={{ height: "100px" }}>Footer</div> */}
     </BgContainer>
   );
 }

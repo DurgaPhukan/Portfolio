@@ -1,32 +1,29 @@
 import React from "react";
+import { links } from "./links";
+import { SxProps } from "@mui/material";
 
-const SocialLinks = () => {
+const SocialLinks = ({ socialLinks }: { socialLinks: links[] }) => {
   return (
-    <div>
+    <div
+      style={{
+        // padding: ".5rem",
+        borderRadius: "1rem",
+        marginTop: "2rem",
+      }}
+    >
       <ul
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          gap: 15,
+          //   justifyContent: "space-evenly",
+          gap: 25,
           listStyle: "none",
+          margin: "0px",
+          padding: "0px",
         }}
       >
-        <li>LinkedIN</li>
-        <li>GitHub</li>
-        <li>Insta</li>
-        <li>
-          <address>
-            Written by <a href="mailto:webmaster@example.com">Jon Doe</a>
-            {/* <br />
-            Visit us at:
-            <br />
-            Example.com
-            <br />
-            Box 564, Disneyland
-            <br /> */}
-            {/* USA */}
-          </address>
-        </li>
+        {socialLinks.map((link) => (
+          <li>{link.icon()}</li>
+        ))}
       </ul>
     </div>
   );
