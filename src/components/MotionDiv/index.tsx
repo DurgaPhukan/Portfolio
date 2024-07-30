@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 
 const directionPattern = {
-  left: -400,
+  left: -300,
   right: 400,
   top: -400,
   bottom: 400,
