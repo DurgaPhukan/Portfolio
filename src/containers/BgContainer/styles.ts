@@ -1,8 +1,8 @@
 import { styled } from "@mui/material";
 
 export const StyledBgContainer = styled("div")(({ theme }) => ({
+  minHeight: "100vh",
   backgroundColor: "rgb(0,0,0)",
-  height: "100vh",
   color: "#ffffff",
   padding: "2rem ",
   [theme.breakpoints.down("md")]: {
