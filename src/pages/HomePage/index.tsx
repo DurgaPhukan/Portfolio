@@ -13,6 +13,7 @@ import BackgroundStory, {
 } from "./BackgroundStory";
 import ProfileDetails from "./ProfileDetails";
 import { Grid } from "@mui/material";
+import { ParallaxText } from "../../components/ParallalText";
 
 export interface IDetailSections {
   id: string;
@@ -73,24 +74,50 @@ function HomePage() {
     console.log("))))))", detailsState);
   };
   return (
-    <MainWrapper>
-      <Grid
-        container
-        spacing={3}
-        // style={{ padding: "0px" }}
-      >
-        <Grid item md={12} lg={6}>
-          <ProfileDetails
-            activeHandler={activeHandler}
-            detailsSections={detailsState}
-          />
-          <SocialLinks socialLinks={socialLinks} />
+    <div>
+      <MainWrapper>
+        <Grid container spacing={3}>
+          <Grid item md={12} lg={6}>
+            <ProfileDetails
+              activeHandler={activeHandler}
+              detailsSections={detailsState}
+            />
+            <SocialLinks socialLinks={socialLinks} />
+          </Grid>
+          <Grid item md={12} lg={6}>
+            <BackgroundStory detailsSections={detailsState} />
+          </Grid>
         </Grid>
-        <Grid item md={12} lg={6}>
-          <BackgroundStory detailsSections={detailsState} />
-        </Grid>
-      </Grid>
-    </MainWrapper>
+      </MainWrapper>
+      <div style={{ margin: "5.5rem 0px" }}>
+        <ParallaxText baseVelocity={5}>
+          FrontEnd | Backend | Analytics |
+        </ParallaxText>
+        <ParallaxText baseVelocity={-5}>React | Node | Docker |</ParallaxText>
+      </div>
+      <MainWrapper>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde soluta
+          quisquam perferendis fugit ullam facere corporis aliquid ab assumenda
+          quibusdam voluptates tempore nihil minima, autem quasi necessitatibus
+          rem odit neque?
+        </p>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            ducimus quidem amet in esse, maxime placeat cumque iure beatae
+            laudantium pariatur molestiae, dolorum sapiente autem natus modi
+            quod deleniti vero!
+          </p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero rem
+          consequuntur error accusantium enim at obcaecati libero ab nam,
+          mollitia voluptatem dolor maxime asperiores recusandae tempora ipsum
+          quo sit beatae!
+        </p>
+      </MainWrapper>
+    </div>
   );
 }
 export default HomePage;

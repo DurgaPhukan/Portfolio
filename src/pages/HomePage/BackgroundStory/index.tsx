@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { IDetailSections } from "..";
 import { StyledH3 } from "../../../components/Text/styles";
+import MotionDiv from "../../../components/MotionDiv";
 
 interface studyDataInterface {
   course: string;
@@ -31,7 +32,7 @@ export const Study = () => {
     <div>
       {studyData.map((data) => (
         <div style={{ margin: "1.5rem 0px" }}>
-          <StyledH3 style={{ fontSize: "1.8rem" }}>
+          <StyledH3>
             {data.course}{" "}
             <span
               style={{
@@ -39,6 +40,7 @@ export const Study = () => {
                 fontSize: "1rem",
                 color: "#aaaaaa",
                 marginLeft: "1.5rem",
+                textAlign: "right",
               }}
             >
               {data.year}
@@ -66,21 +68,17 @@ export const AboutYourself = () => {
           fontWeight: 300,
         }}
       >
-        Senior Frontend Engineer I build pixel-perfect, engaging, and accessible
-        digital experiences. ABOUT EXPERIENCE PROJECTS GitHub LinkedIn CodePen
-        Instagram Twitter Goodreads ABOUT Back in 2012, I decided to try my hand
-        at creating custom Tumblr themes and tumbled head first into the rabbit
-        hole of coding and web development. Fast-forward to today, and I’ve had
-        the privilege of building software for an advertising agency, a
-        start-up, a huge corporation, and a digital product studio. My main
-        focus these days is building accessible user interfaces for our
-        customers at Klaviyo. I most enjoy building software in the sweet spot
-        where design and engineering meet — things that look good but are also
-        built well under the hood. In my free time, I've also released an online
-        video course that covers everything you need to know to build a web app
-        with the Spotify API. When I’m not at the computer, I’m usually rock
-        climbing, reading, hanging out with my wife and two cats, or running
-        around Hyrule searching for Korok seeds K o r o k s e e d s .
+        Back in 2020, I decided to try my hand at creating webpages and tumbled
+        head first into the rabbit hole of coding and web development.
+        Fast-forward to today, and I’ve had the privilege of building software
+        for a start-up, a huge corporation. My main focus these days is building
+        accessible user interfaces for our customers at Clinify Health. I most
+        enjoy building software in the sweet spot where design and engineering
+        meet — things that look good but are also built well under the hood. In
+        my free time, I've also released an online video course that covers
+        everything you need to know to build a web app with the Spotify API.
+        When I’m not at the computer, I’m usually hiking, reading, hanging out
+        with my friends and my doggo, or walking around the natural places .
       </p>
     </div>
   );
@@ -114,19 +112,8 @@ const BackgroundStory = ({
       {detailsSections.map(
         (detail) =>
           detail.active && (
-            <motion.div
-              animate={{
-                x: [50, -20, 0],
-              }}
-              transition={{
-                duration: 1, // Total duration of the animation
-                ease: "easeInOut", // Easing function
-              }}
-            >
-              {detail.component}
-            </motion.div>
+            <MotionDiv direction="right">{detail.component}</MotionDiv>
           )
-        // <motion.div>{detail.component}</motion.div>
       )}
     </div>
   );
