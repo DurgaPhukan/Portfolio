@@ -5,6 +5,7 @@ import { StyledH1, StyledH3, StyledH4 } from "../../components/Text/styles";
 import BgContainer from "../../containers/BgContainer";
 import { StyledRedSpan, StyledTagLineWrapper } from "./styles";
 import { Grid } from "@mui/material";
+import MotionDiv from "../../components/MotionDiv";
 
 function RootLayout() {
   return (
@@ -47,7 +48,6 @@ function RootLayout() {
       <main className="" style={{ minHeight: "600px" }}>
         <Outlet />
       </main>
-      {/* <div style={{ height: "100px" }}>Footer</div> */}
     </BgContainer>
   );
 }

@@ -21,7 +21,7 @@ const ProfileDetails = ({
   detailsSections: IDetailSections[];
 }) => {
   return (
-    <MotionDiv direction="left">
+    <MotionDiv xDirection="left">
       <div
         style={{
           backgroundColor: "#000000",

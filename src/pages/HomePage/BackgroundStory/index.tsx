@@ -112,7 +112,7 @@ const BackgroundStory = ({
       {detailsSections.map(
         (detail) =>
           detail.active && (
-            <MotionDiv direction="right">{detail.component}</MotionDiv>
+            <MotionDiv xDirection="right">{detail.component}</MotionDiv>
           )
       )}
     </div>

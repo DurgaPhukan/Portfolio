@@ -27,7 +27,7 @@ export const StyledH2 = styled("h2")(({ theme }) => ({
 }));
 
 export const StyledH3 = styled("h3")(({ theme }) => ({
-  fontSize: "1.5rem",
+  fontSize: "1.6rem",
   color: "#6c757d",
   padding: "0px",
   margin: "0px",
@@ -35,7 +35,7 @@ export const StyledH3 = styled("h3")(({ theme }) => ({
     "Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
   fontWeight: 400,
   [theme.breakpoints.down("md")]: {
-    fontSize: `calc(1.2875rem + .45vw)`,
+    fontSize: "1.2rem",
   },
 }));
 
