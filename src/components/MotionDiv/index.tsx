@@ -3,9 +3,9 @@ import React, { ReactNode } from "react";
 
 const directionPattern = {
   left: -300,
-  right: 400,
-  top: -400,
-  bottom: 400,
+  right: 300,
+  top: -100,
+  bottom: 100,
 };
 
 const MotionDiv = ({
