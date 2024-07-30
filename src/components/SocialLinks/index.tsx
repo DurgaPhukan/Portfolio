@@ -8,6 +8,7 @@ const SocialLinks = ({ socialLinks }: { socialLinks: links[] }) => {
       style={{
         // padding: ".5rem",
         borderRadius: "1rem",
+        margin: "auto",
         marginTop: "2rem",
       }}
     >

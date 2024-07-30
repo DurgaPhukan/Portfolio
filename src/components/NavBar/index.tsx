@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StyledNavContainer, StyledNavItems } from "./styles";
+import { Grid } from "@mui/material";
 
 interface sectionInterface {
   name: string;
@@ -14,19 +15,14 @@ const sections: sectionInterface[] = [
     url: "/",
   },
   {
-    name: "about",
-    svg: "",
-    url: "/about",
-  },
-  {
     name: "projects",
     svg: "",
     url: "/projects",
   },
   {
-    name: "activities",
+    name: "Contact",
     svg: "",
-    url: "/activities",
+    url: "/contact",
   },
 ];
 
@@ -48,12 +44,16 @@ const NavBar = () => {
   }, []);
   return (
     <StyledNavContainer>
-      {sections.map((section) => (
-        <StyledNavItems role="menuitem" to={section.url}>
-          {section.name.charAt(0).toUpperCase() +
-            section.name.slice(1).toLowerCase()}
-        </StyledNavItems>
-      ))}
+      <Grid container spacing={3}>
+        {sections.map((section) => (
+          <Grid item sx={{ padding: "0px" }} xs={4} spacing={0}>
+            <StyledNavItems role="menuitem" to={section.url}>
+              {section.name.charAt(0).toUpperCase() +
+                section.name.slice(1).toLowerCase()}
+            </StyledNavItems>
+          </Grid>
+        ))}
+      </Grid>
     </StyledNavContainer>
   );
 };

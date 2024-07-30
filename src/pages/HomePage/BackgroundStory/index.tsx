@@ -1,6 +1,6 @@
-import React from "react";
+import { motion } from "framer-motion";
 import { IDetailSections } from "..";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { StyledH3 } from "../../../components/Text/styles";
 
 interface studyDataInterface {
   course: string;
@@ -30,10 +30,23 @@ export const Study = () => {
   return (
     <div>
       {studyData.map((data) => (
-        <div>
-          <h3>{data.course}</h3>
-          <h6>{data.year}</h6>
-          <p>Percentage :{data.percentage}</p>
+        <div style={{ margin: "1.5rem 0px" }}>
+          <StyledH3 style={{ fontSize: "1.8rem" }}>
+            {data.course}{" "}
+            <span
+              style={{
+                fontWeight: 700,
+                fontSize: "1rem",
+                color: "#aaaaaa",
+                marginLeft: "1.5rem",
+              }}
+            >
+              {data.year}
+            </span>
+          </StyledH3>
+          <p style={{ margin: ".5rem 0px", padding: "0px", color: "#adb5bd" }}>
+            Percentage :{data.percentage}
+          </p>
         </div>
       ))}
     </div>
@@ -42,34 +55,34 @@ export const Study = () => {
 
 export const AboutYourself = () => {
   return (
-    // <div style={{ color: "#ffffff", maxWidth: "550px" }}>
-    <p
-      style={{
-        wordSpacing: ".2rem",
-        color: "#adb5bd",
-        fontSize: "1.1rem",
-        wordBreak: "inherit",
-        lineHeight: "25px",
-        fontWeight: 300,
-      }}
-    >
-      Senior Frontend Engineer I build pixel-perfect, engaging, and accessible
-      digital experiences. ABOUT EXPERIENCE PROJECTS GitHub LinkedIn CodePen
-      Instagram Twitter Goodreads ABOUT Back in 2012, I decided to try my hand
-      at creating custom Tumblr themes and tumbled head first into the rabbit
-      hole of coding and web development. Fast-forward to today, and I’ve had
-      the privilege of building software for an advertising agency, a start-up,
-      a huge corporation, and a digital product studio. My main focus these days
-      is building accessible user interfaces for our customers at Klaviyo. I
-      most enjoy building software in the sweet spot where design and
-      engineering meet — things that look good but are also built well under the
-      hood. In my free time, I've also released an online video course that
-      covers everything you need to know to build a web app with the Spotify
-      API. When I’m not at the computer, I’m usually rock climbing, reading,
-      hanging out with my wife and two cats, or running around Hyrule searching
-      for Korok seeds K o r o k s e e d s .
-    </p>
-    // </div>
+    <div>
+      <p
+        style={{
+          wordSpacing: ".2rem",
+          color: "#adb5bd",
+          fontSize: "1.1rem",
+          wordBreak: "inherit",
+          lineHeight: "25px",
+          fontWeight: 300,
+        }}
+      >
+        Senior Frontend Engineer I build pixel-perfect, engaging, and accessible
+        digital experiences. ABOUT EXPERIENCE PROJECTS GitHub LinkedIn CodePen
+        Instagram Twitter Goodreads ABOUT Back in 2012, I decided to try my hand
+        at creating custom Tumblr themes and tumbled head first into the rabbit
+        hole of coding and web development. Fast-forward to today, and I’ve had
+        the privilege of building software for an advertising agency, a
+        start-up, a huge corporation, and a digital product studio. My main
+        focus these days is building accessible user interfaces for our
+        customers at Klaviyo. I most enjoy building software in the sweet spot
+        where design and engineering meet — things that look good but are also
+        built well under the hood. In my free time, I've also released an online
+        video course that covers everything you need to know to build a web app
+        with the Spotify API. When I’m not at the computer, I’m usually rock
+        climbing, reading, hanging out with my wife and two cats, or running
+        around Hyrule searching for Korok seeds K o r o k s e e d s .
+      </p>
+    </div>
   );
 };
 

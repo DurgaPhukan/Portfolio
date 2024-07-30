@@ -1,10 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/Error";
 import About from "./pages/About/About";
-import RootLayout from "./pages/Root";
+import Contact from "./pages/Contact";
+import ErrorPage from "./pages/Error";
 import HomePage from "./pages/HomePage";
 import Projects from "./pages/Projects";
-import Activities from "./pages/Activities";
+import RootLayout from "./pages/Root";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./theme";
 
 const router = createBrowserRouter([
   {
@@ -19,23 +21,23 @@ const router = createBrowserRouter([
         // loader: checkAuthLoader,
       },
       {
-        path: "about",
-        element: <About />,
-      },
-      {
         path: "projects",
         element: <Projects />,
       },
       {
-        path: "activities",
-        element: <Activities />,
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;
