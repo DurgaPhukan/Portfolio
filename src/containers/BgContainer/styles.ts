@@ -4,7 +4,7 @@ export const StyledBgContainer = styled("div")(({ theme }) => ({
   minHeight: "100vh",
   backgroundColor: "rgb(0,0,0)",
   color: "#ffffff",
-  padding: "2rem ",
+  // padding: "2rem ",
   [theme.breakpoints.down("md")]: {
     padding: ".5rem",
   },
@@ -13,10 +13,10 @@ export const StyledBgContainer = styled("div")(({ theme }) => ({
 
 export const MovableContainer = styled("div")(({ theme }) => ({
   position: "absolute",
-  left: "-50px",
-  top: "20px",
-  width: "300px",
-  height: "300px",
+  left: "50px",
+  top: "50px",
+  width: "100px",
+  height: "100px",
   borderRadius: "50%",
   background: "white",
   bordeRadius: "50%",
@@ -26,4 +26,7 @@ export const MovableContainer = styled("div")(({ theme }) => ({
   boxShadow: "0 0 20px 20px rgba(255, 255, 255, 0.2)",
   opacity: ".9",
   zIndex: "9999",
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
 }));
