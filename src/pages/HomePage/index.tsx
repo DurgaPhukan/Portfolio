@@ -14,6 +14,7 @@ import BackgroundStory, {
 import ProfileDetails from "./ProfileDetails";
 import { Grid } from "@mui/material";
 import { ParallaxText } from "../../components/ParallalText";
+import MotionDiv from "../../components/MotionDiv";
 
 export interface IDetailSections {
   id: string;
@@ -96,26 +97,44 @@ function HomePage() {
         <ParallaxText baseVelocity={-5}>React | Node | Docker |</ParallaxText>
       </div>
       <MainWrapper>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde soluta
-          quisquam perferendis fugit ullam facere corporis aliquid ab assumenda
-          quibusdam voluptates tempore nihil minima, autem quasi necessitatibus
-          rem odit neque?
-        </p>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            ducimus quidem amet in esse, maxime placeat cumque iure beatae
-            laudantium pariatur molestiae, dolorum sapiente autem natus modi
-            quod deleniti vero!
-          </p>
+          I have a passion for watching movies, as I enjoy exploring different
+          genres and storytelling techniques. I also find great satisfaction in
+          cycling, which helps me stay active and appreciate the outdoors.
+          Socializing with friends is another key interest of mine, as it allows
+          me to build strong connections and enjoy shared experiences.
+          Additionally, spending quality time with my family is essential,
+          providing a foundation of support and joy in my life. These activities
+          enrich my life and contribute to a well-rounded perspective.
         </div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero rem
-          consequuntur error accusantium enim at obcaecati libero ab nam,
-          mollitia voluptatem dolor maxime asperiores recusandae tempora ipsum
-          quo sit beatae!
-        </p>
+        <MotionDiv xDirection="right">
+          <p>
+            I am a hardworking, passionate, and goal-oriented individual with a
+            strong aptitude for teamwork and management. My dedication to
+            achieving excellence is matched by my ability to adapt and learn
+            quickly in dynamic environments. I am detail-oriented and possess
+            strong problem-solving skills, allowing me to navigate challenges
+            efficiently. My positive attitude and strong communication skills
+            enable me to work collaboratively with others, fostering a
+            productive and supportive team atmosphere. With a commitment to
+            continuous improvement and a proactive approach, I consistently
+            strive to exceed expectations and contribute meaningfully to every
+            project I undertake.
+          </p>
+        </MotionDiv>
+        <MotionDiv>
+          <p>
+            My vision is to become a skilled software developer, leveraging
+            technology to create innovative solutions that make a positive
+            impact. I aspire to use my skills to not only advance in my career
+            but also contribute meaningfully to society. I am passionate about
+            using technology to address real-world challenges and improve the
+            quality of life for others. Within the next few years, I aim to work
+            on projects that promote social good and contribute to humanity. My
+            goal is to be part of initiatives that drive progress and create a
+            better future for all.
+          </p>
+        </MotionDiv>
       </MainWrapper>
     </div>
   );

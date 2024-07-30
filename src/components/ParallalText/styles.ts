@@ -8,7 +8,7 @@ export const StyledParallax = styled("div")(({ theme }) => ({
   whiteSpace: "nowrap",
   display: "flex",
   flexWrap: "nowrap",
-  margin: " 0px",
+  margin: "0px",
 }));
 
 export const StyledScroller = styled(motion.div)(({ theme }) => ({
