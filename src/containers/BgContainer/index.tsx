@@ -19,16 +19,7 @@ const BgContainer = (props: BgContainerType) => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  return (
-    <StyledBgContainer>
-      <MovableContainer
-        style={{
-          transform: `translate(${position.x - 100}px, ${position.y - 100}px)`,
-        }}
-      />
-      {props.children}
-    </StyledBgContainer>
-  );
+  return <StyledBgContainer>{props.children}</StyledBgContainer>;
 };
 
 export default BgContainer;

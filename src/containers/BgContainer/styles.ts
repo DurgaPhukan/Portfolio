@@ -4,14 +4,10 @@ export const StyledBgContainer = styled("div")(({ theme }) => ({
   backgroundColor: "rgb(0,0,0)",
   height: "100vh",
   color: "#ffffff",
-  padding: "50px",
-  //   border: `1px solid ${theme.palette.divider}`,
-  //   "&:not(:last-child)": {
-  //     borderBottom: 0,
-  //   },
-  //   "&:before": {
-  //     display: "none",
-  //   },
+  padding: "2rem ",
+  [theme.breakpoints.down("md")]: {
+    padding: ".5rem",
+  },
   opacity: ".9999",
 }));
 

@@ -12,6 +12,7 @@ import BackgroundStory, {
   Study,
 } from "./BackgroundStory";
 import ProfileDetails from "./ProfileDetails";
+import { Grid } from "@mui/material";
 
 export interface IDetailSections {
   id: string;
@@ -26,21 +27,21 @@ const detailsSectionsConst = [
     active: true,
     title: "Studies",
     component: <Study />,
-    color: "#d81159",
+    color: "#adb5bd",
   },
   {
     id: "about",
     active: false,
     title: "About",
     component: <AboutYourself />,
-    color: "#f7a072",
+    color: "#adb5bd",
   },
   {
     id: "activities",
     active: false,
     title: "Activities",
     component: <Activities />,
-    color: "#023e8a",
+    color: "#adb5bd",
   },
 ];
 
@@ -73,16 +74,22 @@ function HomePage() {
   };
   return (
     <MainWrapper>
-      <Card>
-        <ProfileDetails
-          activeHandler={activeHandler}
-          detailsSections={detailsState}
-        />
-        <SocialLinks socialLinks={socialLinks} />
-      </Card>
-      <Card>
-        <BackgroundStory detailsSections={detailsState} />
-      </Card>
+      <Grid
+        container
+        spacing={3}
+        // style={{ padding: "0px" }}
+      >
+        <Grid item md={12} lg={6}>
+          <ProfileDetails
+            activeHandler={activeHandler}
+            detailsSections={detailsState}
+          />
+          <SocialLinks socialLinks={socialLinks} />
+        </Grid>
+        <Grid item md={12} lg={6}>
+          <BackgroundStory detailsSections={detailsState} />
+        </Grid>
+      </Grid>
     </MainWrapper>
   );
 }
