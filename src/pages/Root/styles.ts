@@ -15,8 +15,11 @@ export const StyledRedSpan = styled("p")(({ theme }) => ({
 }));
 
 export const StyledTagLineWrapper = styled(Grid)(({ theme }) => ({
+  paddingLeft: "5rem",
+  // padding: "5rem",
   display: "flex",
-  padding: "0px 5rem",
+  paddingTop: "4.5rem",
+  paddingBottom: "3.5rem",
   gap: "1rem",
   alignItems: "center",
   minHeight: "80px",

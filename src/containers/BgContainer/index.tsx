@@ -21,11 +21,11 @@ const BgContainer = (props: BgContainerType) => {
   }, []);
   return (
     <StyledBgContainer>
-      <MovableContainer
+      {/* <MovableContainer
         style={{
           transform: `translate(${position.x - 100}px, ${position.y - 100}px)`,
         }}
-      />
+      /> */}
       {props.children}
     </StyledBgContainer>
   );
