@@ -15,6 +15,8 @@ import ProfileDetails from "./ProfileDetails";
 import { Grid } from "@mui/material";
 import { ParallaxText } from "../../components/ParallalText";
 import MotionDiv from "../../components/MotionDiv";
+import ScrollingScaleComponent from "../../components/ScrollingScaleComponent";
+import React from "react";
 
 export interface IDetailSections {
   id: string;
@@ -90,12 +92,14 @@ function HomePage() {
           </Grid>
         </Grid>
       </MainWrapper>
+
       <div style={{ margin: "5.5rem 0px" }}>
         <ParallaxText baseVelocity={5}>
           FrontEnd | Backend | Analytics |
         </ParallaxText>
         <ParallaxText baseVelocity={-5}>React | Node | Docker |</ParallaxText>
       </div>
+
       <MainWrapper>
         <div>
           I have a passion for watching movies, as I enjoy exploring different
@@ -135,6 +139,22 @@ function HomePage() {
             better future for all.
           </p>
         </MotionDiv>
+
+        <div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            deserunt reiciendis repellendus totam veritatis quam ullam debitis
+            facere. Saepe nemo et libero vero animi. Exercitationem provident
+            necessitatibus praesentium distinctio vero.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+            nostrum amet, fugit omnis nemo quos iusto distinctio excepturi
+            temporibus, quo quibusdam, asperiores animi hic quia? Deleniti eum
+            autem eaque est.
+          </p>
+        </div>
       </MainWrapper>
     </div>
   );

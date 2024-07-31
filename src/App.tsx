@@ -20,14 +20,14 @@ const router = createBrowserRouter([
         element: <HomePage />,
         // loader: checkAuthLoader,
       },
-      {
-        path: "projects",
-        element: <Projects />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
+      // {
+      //   path: "projects",
+      //   element: <Projects />,
+      // },
+      // {
+      //   path: "contact",
+      //   element: <Contact />,
+      // },
     ],
   },
 ]);

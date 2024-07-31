@@ -1,26 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
+    "target": "ES6",
+    "allowJs": false,
+    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "strictNullChecks": false,
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vitest/globals", "vite/client"],
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+
+    /* Bundler mode */
+    "jsx": "react",
     "noEmit": true,
-    "jsx": "react-jsx"
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src /**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "typedocOptions": {
+    "out": "docs",
+    "entryPoints": ["src/App.tsx"]
+  },
+  "exclude": ["dist", ".git", "cypress", ".vs-code", "node_modules", "coverage", ".husky", "scanner"]
 }
